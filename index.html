@@ -110,6 +110,18 @@
 
   /* ──────────────── HERO ──────────────── */
   .hero { padding-top: 48px; }
+  .hero-media {
+    width: 160px; height: 160px; border-radius: 50%;
+    overflow: hidden; margin-bottom: 18px;
+    border: 1px solid rgba(255,255,255,.12);
+    box-shadow: 0 0 0 6px rgba(200,184,122,.08), 0 18px 40px rgba(0,0,0,.45);
+    opacity:0; transform:translateY(10px);
+    animation: fadeUp .6s 1.35s cubic-bezier(.25,.46,.45,.94) forwards;
+  }
+  .hero-media img {
+    width:100%; height:100%; object-fit:cover; display:block;
+    filter: contrast(1.02) saturate(0.95);
+  }
   .hero h1 {
     font-family: var(--display); font-size: clamp(42px,9vw,68px);
     font-weight: 800; color: #fff; line-height: 1.05; letter-spacing: -.03em;
@@ -332,6 +344,7 @@
     .wrapper{padding:0 18px}
     nav{gap:4px} nav a{font-size:11px;padding:5px 9px}
     .edu-card,.card,.poster-item,.paper-item{padding:16px 18px}
+    .hero-media { width: 128px; height: 128px; }
   }
 </style>
 </head>
@@ -356,6 +369,9 @@
 
   <!-- ─── HERO ─── -->
   <section class="hero" id="hero">
+    <div class="hero-media">
+      <img src="headshot/IMG_7820_edited_1.JPG" alt="Headshot of Aahil Ansari" />
+    </div>
     <h1 id="typed-name"></h1>
     <p class="role">Mechanical Engineering &middot; Biomedical Co-op</p>
     <p class="location">Edmonton &nbsp;|&nbsp; AB &nbsp;|&nbsp; Canada</p>
